@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminlogin</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/addtask.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/88b5890a21.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script&family=Josefin+Sans:ital,wght@1,300&family=Moon+Dance&display=swap');
+      .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border-radius:5% ;
+        margin-bottom: 12px;
+      }
+      .feature-box{
+        position: relative;
+      }
+      .feature-text{
+        position: absolute;
+        top: 38%;
+        left: 39%;
+        font-family: 'Moon Dance', cursive;
+        font-size: 70px;
+        font-weight: bold;
+      }
+      h3,label{
+        font-family: 'Moon Dance', cursive;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      label{
+        font-family: 'Moon Dance', cursive;
+        font-size: 20px;
+      }
+      .feature-img img{
+        height: 150px;
+        width: 180px;
+        border-radius: 5%;
+      }
+      .feature-img
+      {
+        position:absolute;
+        top: 28%;
+        left: 53%;
+      }
+      .two{
+      border-radius: 5px 10px;
+      padding: 10px 20px;
+      font-size: 15px;
+      background: linear-gradient(rgb(221, 229, 239),rgb(156, 188, 241));
+      border: 0;
+      box-shadow: 0 15px 20px rgb(131, 177, 213),
+      10px 5px 7px rgb(112, 165, 206);
+    }
+    body{
+      background-image: url("https://img.freepik.com/premium-photo/abstract-blur-background-from-hospital-clinic-interior-create-background-design-key-visual-layout_36051-729.jpg?w=1060");
+    }
+    </style>
+</head>
+<body>
+  <div class="feature-box col-12" >
+    <img src="https://img.freepik.com/premium-vector/blank-paper-realistic-mock-up-with-hanging_92153-1.jpg?w=1060" class="img1 center" alt="">
+    <div class="feature-text col-12" >
+      <h1>Task<br>Bar</h1>
+    </div> 
+    <div class="feature-img col-12">
+      <img src="https://img.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_1150-35019.jpg?w=1060&t=st=1673465107~exp=1673465707~hmac=ac0163a0e63eea3c86ab6bbefaa5f41358108cc0d7dd16904364fd62f06347f9"       alt="">
+    </div>
+  </div>
+               <div class="container">
+                <div class="row grid-3">
+                    <div class="col-12 ">
+                        <div class="three">
+                            <h3 class="good text-center">Add a Task</h3>             
+                            <form method="POST">
+                                <div class="form-row">
+                                  <div class="col-12 mb-1">
+                                    <label for="exampleFormControlInput1">id</label>
+                                    <input type="number" class="form-control text-center" name="id" placeholder="id">
+                                  </div>
+                                  </div>
+                                  <div class="form-row">
+                                  <div class="col-12">
+                                    <label for="exampleFormControlInput1 "> Name</label>
+                                    <input type="text" class="form-control text-center" placeholder="Name" name="name">
+                                  </div>
+                                </div>
+                              
+                                  
+                              
+                                <div class="form-row">
+                                  <div class="col-12">
+                                    <label for="exampleFormControlInput1">assign_to</label>
+                                    <input type="number" class="form-control text-center " placeholder="about task" name="assign_to">
+                                  </div>
+                                </div>
+                               
+                                  <div class="form-row">
+                                    <div class="col-12">
+                                      <label for="exampleFormControlInput1">date</label>
+                                      <input type="date" class="form-control text-center" placeholder="date" name="date">
+                                    </div>
+                                  </div>
+                                
+                                    
+                                      <div class="form-row">
+                                        <div class="col-12">
+                                          <label for="exampleFormControlInput1">Due Date</label>
+                                          <input type="date" class="form-control text-center" placeholder="date" name="duedate">
+                                        </div>
+                                      </div>
+                                      <div class="row grid-3">
+                                        <div class="col-12 text-right">
+                                            <div class="row grid-3">
+                                                <div class="col-12 mt-3 mb-3 text-center" >
+                                                  <button class="two" style="margin-right:150px;">Submit</button>
+                                                  <a href="{{url_for('adminpanel')}}"><button class="two">back</button></a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </form>
+            
+      <script src="http s://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    </body>
+    </html>       
+   
